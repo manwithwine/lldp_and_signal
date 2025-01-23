@@ -10,7 +10,7 @@ since the script will read data from the switches/routers, and if the interface 
 will offer to write the logpass manually, or skip this IP address.
 5. Wait for the script to execute. The final table will be saved in the data directory.
 
-It is necessary to keep in mind that LLDP check works for all 4 vendors: Huawei (DataCenter switches), Cisco (Nexus Switches), B4COM 4xxx-2xxx switches)
+It is necessary to keep in mind that LLDP check works for all 4 vendors: Huawei (DataCenter switches), Cisco (Nexus Switches), B4COM 4xxx-2xxx switches.
 TX/RX signal check works only for Huawei (DataCenter switches) and B4COM 4xxx switches.
 
 RX/TX comparison is performed as follows: it takes the current TX/RX value from the switch/router and compares it with the range from -4 to 4.
