@@ -77,7 +77,7 @@ class ExcelHandler:
                 if not partial_match.empty:
                     df.loc[partial_match.index, 'current_remote_host'] = remote_host
                     df.loc[partial_match.index, 'current_remote_int'] = remote_int
-                    df.loc[partial_match.index, 'status'] = 'Ошибка'
+                    df.loc[partial_match.index, 'status'] = 'Mistake'
                 else:
                     shouldnt_be_there_df = pd.DataFrame([row], columns=['local_host', 'local_int', 'remote_host',
                                                                         'remote_int'])
@@ -106,7 +106,7 @@ class ExcelHandler:
                 df.loc[signal_match.index, 'status_RX'] = evaluate_status(rx)
 
         # Mark entries that haven't been matched
-        df.loc[df['current_remote_host'].isnull() & df['current_remote_int'].isnull(), 'status'] = 'Линк отсутствует'
+        df.loc[df['current_remote_host'].isnull() & df['current_remote_int'].isnull(), 'status'] = 'No Link'
 
         # Save the final populated file
         df.to_excel(result_file, index=False)
